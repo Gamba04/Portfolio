@@ -97,6 +97,16 @@ div
     text-align: center;
 }
 
+section
+{
+    top: 0%;
+    height: 100%;
+    left: 0%;
+    width: 100%;
+
+    text-align: center;
+}
+
 pre
 {
     font-family: inherit;
@@ -104,6 +114,7 @@ pre
     font-size: 20px;
     
     margin: 0%;
+    white-space: pre-wrap;
 }
 
 pre.title
@@ -147,4 +158,38 @@ pre.subtitle
     position: absolute;
     top: 20%;
     user-select: none;
+}
+
+#home #gradient
+{
+    background-image: linear-gradient(#ebe3dd, #11091d);
+    height: 200%;
+}
+
+#home #content
+{
+    position: absolute;
+    top: 200%;
+    height: 115%;
+    padding-top: 20%;
+
+    user-select: none;
+}
+
+.textBlock
+{
+    position: relative;
+    
+    left: 35%;
+    width: 30%;
+    height: fit-content;
+
+    word-wrap: break-word;
+}
+
+.dark
+{
+    background-color: #11091d;
+
+    color: #ebe3dd;
 }
