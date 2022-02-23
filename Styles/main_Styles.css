@@ -1,9 +1,18 @@
+@font-face
+{
+    font-family: "Bahnschrift";
+    src: url("./Resources/Fonts/Bahnschrift.woff") format("woff");
+    
+    font-weight: lighter;
+    font-style: normal;
+}
+
 body
 {
     background-color: #ebe3dd;
-    font-weight: normal;
-
-    font-family: 'Segoe UI';
+    font-family:'Bahnschrift';
+    
+    font-weight: lighter;
 }
 
 main
@@ -38,6 +47,7 @@ div
 
 pre
 {
+    font-family: inherit;
     font-weight: inherit;
     font-size: 27px;
     
@@ -51,7 +61,7 @@ pre.title
 
 pre.subtitle
 {
-    font-size: 40px;
+    font-size: 35px;
 }
 
 .container
