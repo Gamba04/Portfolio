@@ -29,10 +29,39 @@ header
     background-color: inherit;
 
     position: fixed;
-    top: -10%;
-    height: 17%;
-    left: -10%;
-    width: 120%;
+    top: 0%;
+    height: 7%;
+    left: 0%;
+    width: 100%;
+}
+
+ul
+{
+    font-size: 20px;
+}
+
+a
+{
+    color: inherit;
+    text-decoration: inherit;
+}
+
+#topbar
+{
+    position: relative;
+
+    top: 2%;
+    left: 30%;
+    width: 40%;
+
+    user-select: none;
+}
+
+#topbar li
+{
+    display: inline;
+    vertical-align: middle;
+    line-height: 1;
 }
 
 div
@@ -49,7 +78,7 @@ pre
 {
     font-family: inherit;
     font-weight: inherit;
-    font-size: 27px;
+    font-size: 25px;
     
     margin: 0%;
 }
