@@ -1,0 +1,121 @@
+@font-face
+{
+    font-family: "Bahnschrift";
+    src: url("./Resources/Fonts/Bahnschrift.woff") format("woff");
+    
+    font-weight: lighter;
+    font-style: normal;
+}
+
+.dark ::selection
+{
+    color: #11091d;
+    background: #ebe3dd;
+}
+
+::selection
+{
+    color: #ebe3dd;
+    background: #11091d;
+}
+
+body
+{
+    background-color: #ebe3dd;
+    font-family:'Bahnschrift';
+    font-weight: lighter;
+
+    position: static;
+
+    margin: 0;
+}
+
+/* header ------------------------------------------------------------------------------------------------------------------------------- */
+
+header
+{
+    background-color: inherit;
+
+    position: fixed;
+    top: 0;
+    height: 7vh;
+    left: 0;
+    width: 100%;
+
+    z-index: 2;
+}
+
+header.container
+{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+#topbar
+{
+    position: relative;
+
+    top: 2%;
+    left: 30%;
+    width: 40%;
+
+    user-select: none;
+}
+
+#topbar li
+{
+    display: inline;
+    vertical-align: middle;
+    line-height: 1;
+}
+
+#itchio
+{
+    position: absolute;
+
+    right: 1vh;
+    top: 1vh;
+    height: 5vh;
+
+    margin: 0;
+}
+
+/* main ------------------------------------------------------------------------------------------------------------------------------- */
+
+main
+{
+    position: static;
+
+    margin-top: 7vh;
+
+    z-index: 0;
+}
+
+.secondary
+{
+    padding-top: 7vh;
+    padding-bottom: 20vh;
+}
+
+.secondary #headline
+{
+    padding-bottom: 20vh;
+}
+
+/* footer ------------------------------------------------------------------------------------------------------------------------------- */
+
+footer
+{
+    position: static;
+    height: 20vh;
+    
+    z-index: 1;
+}
+
+footer.container
+{
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}

@@ -7,7 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./Styles/main_Styles.css">
+    <link rel="stylesheet" href="./Styles/main.css">
+    <link rel="stylesheet" href="./Styles/other.css">
+    <link rel="stylesheet" href="./Styles/home.css">
+    <link rel="stylesheet" href="./Styles/music&art.css">
+    <link rel="stylesheet" href="./Styles/about.css">
 </head>
 
 <body>
@@ -18,15 +22,15 @@
     <section id="topbar">
 
         <ul>
-            <li id="t_home"><a href="">HOME •</a></li>
-            <li id="t_music&art"><a href="">MUSIC & ART •</a></li>
-            <li id="t_about"><a href="">ABOUT •</a></li>
-            <li id="t_contact"><a href="#contact">CONTACT</a></li>
+            <li id="home"><a href="">HOME</a> •</li>
+            <li id="music&art"><a href="">MUSIC & ART</a> •</li>
+            <li id="about"><a href="">ABOUT</a> •</li>
+            <li id="contact"><a href="#footer">CONTACT</a></li>
         </ul>
         
     </section>
     
-    <a href="https://gamba04.itch.io/"><img id="itchio" src="./Resources/Images/itch-io.png" alt="itch.io"></a>
+    <a href="https://gamba04.itch.io/"><img id="itchio" src="./Resources/Images/Other/itch-io.png" alt="itch.io"></a>
 
 </header>
 
@@ -36,11 +40,10 @@
         <section id="home">
             <section id="headline">
 
-                <div class="container default">
+                <div class="default container">
                     <pre class="title">G A M B A  0 4</pre>
                 </div>
 
-                <br>
                 <pre class="subtitle">GAME PROGRAMMER • ARTIST • MUSIC PRODUCER</pre>
 
             </section>
@@ -49,11 +52,10 @@
 
             <section id="content" class="dark">
 
-                <div class="container default">
+                <div class="default container">
                     <pre class="title">CHROMAN</pre>
                 </div>
 
-                <br>
                 <br>
                 <br>
 
@@ -63,18 +65,55 @@
 
                 <br>
                 <br>
-                <img src="./Resources/Images/Chroman_1.png" alt="Chroman screenshot 1" width="40%">
-                <br>
-                <img src="./Resources/Images/Chroman_2.png" alt="Chroman screenshot 2" width="40%">
+
+                <section class="gallery">
+                    <img class="container" src="./Resources/Images/Chroman/Chroman_1.png" alt="Chroman screenshot 1">
+                    <img class="container" src="./Resources/Images/Chroman/Chroman_2.png" alt="Chroman screenshot 2">
+                </section>
 
             </section>
+        </section>
+
+        <section id="music&Art" class="secondary">
+            <section id="headline">
+
+                <div class="default container">
+                    <pre class="title">MUSIC & ART</pre>
+                </div>
+
+                <pre class="subtitle"><a href="https://soundcloud.com/code_dreamer">CODE DREAMER</a> • <a href="https://www.instagram.com/art.jcquintero/">@ART.JCQUINTERO</a></pre>
+
+            </section>
+
+            <section class="gallery">
+                <img class="container" src="./Resources/Images/Art/luna.jpg" alt="Drawing of Luna">
+                <img class="container" src="./Resources/Images/Art/bastian.jpg" alt="Drawing of Bastian">
+                <img class="container" src="./Resources/Images/Art/abuela.jpg" alt="Drawing of Abuela">
+                <img class="container" src="./Resources/Images/Art/caballo1.jpg" alt="Drawing of Horse 1">
+                <img class="container" src="./Resources/Images/Art/caballo2.jpg" alt="Drawing of Horse 2">
+            </section>
+
+        </section>
+
+        <section id="about" class="secondary">
+            <section id="headline">
+
+                <div class="default container">
+                    <pre class="title">ABOUT</pre>
+                </div>
+                
+                <pre class="subtitle">JUAN CAMILO QUINTERO</pre>
+
+            </section>
+
+            <img class="container" src="./Resources/Images/Other/yo.JPG" alt="Picture of me" width="50%">
         </section>
     </main>
 
 <!-- footer --------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
     <footer class="dark container">
-        <section id="contact">
+        <section id="footer">
 
             <br>
             <pre class="subtitle">CONTACT</pre>

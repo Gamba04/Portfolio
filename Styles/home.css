@@ -1,0 +1,26 @@
+#home #headline
+{
+    position: absolute;
+    top: 30vh;
+    height: 0;
+    
+    user-select: none;
+}
+
+#home #gradient
+{
+    background-image: linear-gradient(#ebe3dd, #11091d);
+    
+    position: relative;
+    height: 300vh;
+
+    z-index: -1;
+}
+
+#home #content
+{
+    position: static;
+
+    padding-top: 10vh;
+    padding-bottom: 20vh;
+}
