@@ -23,26 +23,46 @@ body
 {
     background-color: #ebe3dd;
     font-family:'Bahnschrift';
-    
     font-weight: lighter;
+
+    position: static;
+
+    margin: 0;
+}
+
+header
+{
+    background-color: inherit;
+
+    position: fixed;
+    top: 0;
+    height: 7vh;
+    left: 0;
+    width: 100%;
+
+    z-index: 2;
+}
+
+header.container
+{
+    border-top: none;
+    border-left: none;
+    border-right: none;
 }
 
 main
 {
-    position: absolute;
-    top: 0%;
-    height: 150%;
-    left: 0%;
-    width: 100%;
+    position: static;
+    
+    z-index: 0;
 }
 
 footer
 {
-    position: absolute;
-    top: 510%;
-    height: 20%;
-    left: 0%;
-    width: 100%;
+    position: static;
+    height: 20vh;
+    
+    z-index: 1;
 }
 
 footer.container
@@ -52,22 +72,33 @@ footer.container
     border-right: none;
 }
 
-header
+#home #headline
 {
-    background-color: inherit;
-
-    position: fixed;
-    top: 0%;
-    height: 7%;
-    left: 0%;
-    width: 100%;
+    position: absolute;
+    top: 30vh;
+    height: 0;
+    
+    user-select: none;
 }
 
-header.container
+#home #gradient
 {
-    border-top: none;
-    border-left: none;
-    border-right: none;
+    background-image: linear-gradient(#ebe3dd, #11091d);
+    
+    position: relative;
+    height: 300vh;
+
+    margin-top: 7vh;
+
+    z-index: -1;
+}
+
+#home #content
+{
+    position: static;
+
+    padding-top: 10vh;
+    padding-bottom: 20vh;
 }
 
 ul
@@ -99,21 +130,11 @@ a
     line-height: 1;
 }
 
-div
+div, section
 {
-    top: 0%;
+    top: 0;
     height: 100%;
-    left: 0%;
-    width: 100%;
-
-    text-align: center;
-}
-
-section
-{
-    top: 0%;
-    height: 100%;
-    left: 0%;
+    left: 0;
     width: 100%;
 
     text-align: center;
@@ -125,7 +146,7 @@ pre
     font-weight: inherit;
     font-size: 20px;
     
-    margin: 0%;
+    margin: 0;
     white-space: pre-wrap;
 }
 
@@ -165,27 +186,6 @@ pre.subtitle
     display: inline-block;
 }
 
-#home #headline
-{
-    position: absolute;
-    top: 20%;
-    user-select: none;
-}
-
-#home #gradient
-{
-    background-image: linear-gradient(#ebe3dd, #11091d);
-    height: 200%;
-}
-
-#home #content
-{
-    position: absolute;
-    top: 200%;
-    height: 113%;
-    padding-top: 20%;
-}
-
 .textBlock
 {
     position: relative;
@@ -222,8 +222,9 @@ br
 
 #itchio
 {
-    position: fixed;
+    position: absolute;
 
-    right: 0%;
-    top: 0%;
+    right: 0.5%;
+    top: 15%;
+    height: 70%;
 }
