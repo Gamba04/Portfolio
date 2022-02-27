@@ -24,3 +24,8 @@
     padding-top: 10vh;
     padding-bottom: 20vh;
 }
+
+#home #content .container.default
+{
+    margin-bottom: 4em;
+}
