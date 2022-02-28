@@ -128,10 +128,10 @@ footer
     
     z-index: 1;
 
-    padding-top: 2em;
-    padding-bottom: 1em;
+    padding-top: 4vh;
+    padding-bottom: 1vh;
 
-    line-height: 2em;
+    line-height: 4vh;
 }
 
 footer.container

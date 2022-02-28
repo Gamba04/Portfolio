@@ -46,11 +46,11 @@ pre.subtitle
 {
     position: auto;
     
-    height: 250px;
-    line-height: 250px;
+    height: 30vh;
+    line-height: 30vh;
 
     margin-left: 27.5%;
-    margin-bottom: 1em;
+    margin-bottom: 1vh;
     width: 45%;
 }
 
@@ -116,5 +116,5 @@ br
 
 img.container
 {
-    padding: 5px;
+    padding: 0.5vh;
 }
