@@ -140,3 +140,15 @@ footer.container
     border-left: none;
     border-right: none;
 }
+
+footer #title
+{
+    margin-bottom: 4vh;
+}
+
+footer #content
+{
+    position: relative;
+
+    height: fit-content;
+}
