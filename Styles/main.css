@@ -60,20 +60,27 @@ header.container
 
 #topbar
 {
-    position: relative;
+    user-select: none;
+}
 
-    top: 1vh;
+#topbar ul
+{
+    position: absolute;
+    top: 0;
+    height: 100%;
     left: 0;
     width: 100%;
 
-    line-height: 1vh;
+    line-height: 6vh;
 
-    user-select: none;
+    margin: 0;
+    padding: 0;
 }
 
 #topbar li
 {
     display: inline;
+
     vertical-align: middle;
 
     font-size: 2.15vh;
