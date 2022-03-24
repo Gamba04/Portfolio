@@ -7,33 +7,46 @@
     font-style: normal;
 }
 
-.dark ::selection
+:root
 {
-    color: #11091d;
-    background: #ebe3dd;
+    --color_Light: #ebe3dd;
+    --color_Dark: #11091d;
+
+    --font-size_Normal: 20px;
+    --font-size_Subtitle: 40px;
+    --font-size_Title: 70px;
+
+    --button-hover: 110%;
+    --button-press: 80%;
 }
 
-::selection
+*
 {
-    color: #ebe3dd;
-    background: #11091d;
-}
+    margin: 0;
+    padding: 0;
 
-html
-{
-    max-width: 100vw;
-    overflow-x: hidden;
+    transition: 0.1s;
 }
 
 body
 {
-    background-color: #ebe3dd;
-    font-family:'Bahnschrift';
+    background-color: var(--color_Light);
+    font-family: 'Bahnschrift';
     font-weight: lighter;
 
-    position: static;
+    overflow-x: hidden;
+}
 
-    margin: 0;
+::selection
+{
+    color: var(--color_Light);
+    background: var(--color_Dark);
+}
+
+.dark ::selection, .dark::selection
+{
+    color: var(--color_Dark);
+    background: var(--color_Light);
 }
 
 /* header ------------------------------------------------------------------------------------------------------------------------------- */
@@ -42,11 +55,9 @@ header
 {
     background-color: inherit;
 
-    position: fixed;
+    position: sticky;
     top: 0;
-    height: 6vh;
-    left: 0;
-    width: 100%;
+    height: 50px;
 
     z-index: 2;
 }
@@ -60,41 +71,58 @@ header.container
 
 #topbar
 {
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
     user-select: none;
+    pointer-events: none;
 }
 
 #topbar ul
 {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    left: 0;
-    width: 100%;
+    display: flex;
 
-    line-height: 6vh;
-
-    margin: 0;
-    padding: 0;
+    justify-content: space-between;
+    pointer-events: all;
 }
 
 #topbar li
 {
     display: inline;
 
-    vertical-align: middle;
+    font-size: var(--font-size_Normal);
 
-    font-size: 2.15vh;
+    padding: 0 0.2vw;
 }
 
-#itchio
+header .social
 {
-    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 
-    right: 0.5vh;
-    top: 0.5vh;
-    height: 5vh;
+    pointer-events: none;
+}
 
-    margin: 0;
+header .social div
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header .social *
+{
+    height: inherit;
+}
+
+header .social img
+{
+    width: auto;
+    height: 100%;
 }
 
 /* main ------------------------------------------------------------------------------------------------------------------------------- */
