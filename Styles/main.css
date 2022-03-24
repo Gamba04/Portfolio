@@ -35,17 +35,19 @@
 
 :root
 {
-    --color_Light: #ebe3dd;
-    --color_Dark: #11091d;
+    --color-light: #ebe3dd;
+    --color-dark: #11091d;
 
-    --font-size_Normal: 0.7rem;
-    --font-size_Subtitle: 1.2rem;
-    --font-size_Title: 2.5rem;
+    --font-size-normal: 0.7rem;
+    --font-size-subtitle: 1.2rem;
+    --font-size-title: 2.5rem;
 
     --button-hover: 110%;
     --button-press: 80%;
 
     --transition-delay: 0.1s;
+
+    --line-thickness: 4px;
 }
 
 *
@@ -53,12 +55,12 @@
     margin: 0;
     padding: 0;
 
-    transition: height var(--transition-delay), font-size var(--transition-delay);
+    transition: height var(--transition-delay), width var(--transition-delay), font-size var(--transition-delay);
 }
 
 body
 {
-    background-color: var(--color_Light);
+    background-color: var(--color-light);
     font-family: 'Bahnschrift';
     font-weight: lighter;
 
@@ -73,14 +75,14 @@ body *
 
 ::selection
 {
-    color: var(--color_Light);
-    background: var(--color_Dark);
+    color: var(--color-light);
+    background: var(--color-dark);
 }
 
 .dark ::selection, .dark::selection
 {
-    color: var(--color_Dark);
-    background: var(--color_Light);
+    color: var(--color-dark);
+    background: var(--color-light);
 }
 
 /* header ------------------------------------------------------------------------------------------------------------------------------- */
@@ -127,7 +129,7 @@ header.container
 {
     display: inline;
 
-    font-size: var(--font-size_Normal);
+    font-size: var(--font-size-normal);
 
     padding: 0 0.2vw;
 }

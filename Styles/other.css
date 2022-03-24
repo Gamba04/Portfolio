@@ -10,9 +10,9 @@ div, section
 
 .dark
 {
-    background-color: #11091d;
+    background-color: var(--color-dark);
 
-    color: #ebe3dd;
+    color: var(--color-light);
 }
 
 a
@@ -62,7 +62,7 @@ pre
 {
     font-family: inherit;
     font-weight: inherit;
-    font-size: var(--font-size_Normal);
+    font-size: var(--font-size-normal);
     
     margin: 0;
     white-space: pre-wrap;
@@ -70,19 +70,19 @@ pre
 
 pre.title
 {
-    font-size: var(--font-size_Title);
+    font-size: var(--font-size-title);
 }
 
 pre.subtitle
 {
-    font-size: var(--font-size_Subtitle);
+    font-size: var(--font-size-subtitle);
 }
 
 .container
 {
     text-align: center;
 
-    border: solid 4px;
+    border: solid var(--line-thickness);
 }
 
 .container.default
@@ -147,4 +147,24 @@ br
 img.container
 {
     padding: 0.5vh;
+}
+
+br.underline
+{
+    position: relative;
+    bottom: 0;
+
+    display: inline;
+    background-color: var(--color-dark);
+}
+
+.button br.underline
+{
+    height: var(--line-thickness);
+    width: 0;
+}
+
+.button:hover br.underline
+{
+    width: fit-content;
 }
