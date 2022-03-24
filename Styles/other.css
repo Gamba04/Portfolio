@@ -87,14 +87,17 @@ pre.subtitle
 
 .container.default
 {
-    position: auto;
-    
-    height: 30vh;
-    line-height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    margin-left: 27.5%;
-    margin-bottom: 1vh;
-    width: 45%;
+    height: 300px;
+    max-height: 20vw;
+    width: 1000px;
+    max-width: 80vw;
+
+    margin: 0 auto;
+    margin-bottom: 10px;
 }
 
 .container pre

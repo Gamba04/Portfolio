@@ -1,7 +1,7 @@
 #home #headline
 {
-    position: absolute;
-    top: 30vh;
+    position: relative;
+    top: 200px;
     height: 0;
     
     user-select: none;
@@ -11,8 +11,8 @@
 {
     background-image: linear-gradient(#ebe3dd, #11091d);
     
-    position: relative;
-    height: 300vh;
+    position: static;
+    height: 2000px;
 
     z-index: -1;
 }
@@ -21,8 +21,8 @@
 {
     position: static;
 
-    padding-top: 10vh;
-    padding-bottom: 20vh;
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 
 #home #content .container.default

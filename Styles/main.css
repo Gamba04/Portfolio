@@ -7,17 +7,45 @@
     font-style: normal;
 }
 
+@media screen and (max-width: 700px)
+{
+    html
+    {
+        font-size: 3vw;
+    }
+
+    :root
+    {
+        --header-height: 5vw;
+    }
+}
+
+@media screen and (min-width: 701px)
+{
+    html
+    {
+        font-size: 2rem;
+    }
+
+    :root
+    {
+        --header-height: 50px;
+    }
+}
+
 :root
 {
     --color_Light: #ebe3dd;
     --color_Dark: #11091d;
 
-    --font-size_Normal: 20px;
-    --font-size_Subtitle: 40px;
-    --font-size_Title: 70px;
+    --font-size_Normal: 0.7rem;
+    --font-size_Subtitle: 1.2rem;
+    --font-size_Title: 2.5rem;
 
     --button-hover: 110%;
     --button-press: 80%;
+
+    --transition-delay: 0.1s;
 }
 
 *
@@ -25,7 +53,7 @@
     margin: 0;
     padding: 0;
 
-    transition: 0.1s;
+    transition: height var(--transition-delay), font-size var(--transition-delay);
 }
 
 body
@@ -35,6 +63,12 @@ body
     font-weight: lighter;
 
     overflow-x: hidden;
+    max-width: 100vw;
+}
+
+body *
+{
+    max-width: inherit;
 }
 
 ::selection
@@ -57,7 +91,7 @@ header
 
     position: sticky;
     top: 0;
-    height: 50px;
+    height: var(--header-height);
 
     z-index: 2;
 }
@@ -129,8 +163,6 @@ header .social img
 
 main
 {
-    position: static;
-
     margin-top: 6vh;
 
     z-index: 0;
