@@ -3,7 +3,6 @@
     font-family: "Bahnschrift";
     src: url("./Resources/Fonts/Bahnschrift.woff") format("woff");
     
-    font-weight: normal;
     font-style: normal;
 }
 
@@ -12,7 +11,7 @@
     --color-light: #ebe3dd;
     --color-dark: #11091d;
 
-    --button-hover: 110%;
+    --button-hover: 120%;
     --button-press: 80%;
 
     --transition-delay: 0.1s;
@@ -22,9 +21,15 @@
 
 *
 {
+    top: 0;
+    left: 0;
     margin: 0;
     padding: 0;
 
+    max-width: 100vw;
+    
+    text-align: center;
+    
     transition: height var(--transition-delay), width var(--transition-delay), font-size var(--transition-delay);
 }
 
@@ -32,15 +37,9 @@ body
 {
     background-color: var(--color-light);
     font-family: 'Bahnschrift';
-    font-weight: lighter;
+    font-weight: 300;
 
     overflow-x: hidden;
-    max-width: 100vw;
-}
-
-body *
-{
-    max-width: inherit;
 }
 
 /* header ------------------------------------------------------------------------------------------------------------------------------- */
@@ -50,7 +49,6 @@ header
     background-color: inherit;
 
     position: sticky;
-    top: 0;
     height: var(--header-height);
     padding: 0 0.25rem;
 
@@ -64,7 +62,7 @@ header.container
     border-right: none;
 }
 
-#topbar
+header .content
 {
     position: absolute;
 
@@ -76,7 +74,7 @@ header.container
     pointer-events: none;
 }
 
-#topbar ul
+header .content ul
 {
     display: flex;
 
@@ -84,8 +82,10 @@ header.container
     pointer-events: all;
 }
 
-#topbar li
+header .content li
 {
+    position: relative;
+    top: calc(var(--header-height) * 0.03);
     display: inline;
 
     font-size: var(--font-size-topbar);
@@ -93,7 +93,7 @@ header.container
     padding: 0 0.1rem;
 }
 
-header .social
+header .media
 {
     display: flex;
     justify-content: flex-end;
@@ -102,22 +102,10 @@ header .social
     pointer-events: none;
 }
 
-header .social div
+header .media .button
 {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-header .social *
-{
-    height: inherit;
-}
-
-header .social img
-{
-    width: auto;
-    height: 100%;
+    height: 80%;
+    width: 2rem;
 }
 
 /* main ------------------------------------------------------------------------------------------------------------------------------- */
@@ -226,12 +214,8 @@ footer #content
 
 div, section
 {
-    top: 0;
     height: 100%;
-    left: 0;
     width: 100%;
-
-    text-align: center;
 }
 
 a
@@ -244,11 +228,13 @@ a
 
 img
 {
+    display: block;
+
+    width: 25rem;
+    max-width: 70vw;
+    
     user-select: none;
     pointer-events: none;
-
-    display: block;
-    margin: 0 auto;
 }
 
 a img
@@ -256,25 +242,48 @@ a img
     pointer-events: all;
 }
 
-.button:hover, .button :hover
+.button
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button.img.height *
+{
+    height: 100%;
+    width: fit-content;
+}
+
+.button.img.height > div.root:hover
+{
+    height: var(--button-hover);
+}
+
+.button.img.height > div.root img
+{
+    width: auto;
+}
+
+.button.img.width *
+{
+    height: fit-content;
+    width: 100%;
+}
+
+.button.img.width > div.root:hover
+{
+    width: var(--button-hover);
+}
+
+.button.img.width > div.root img
+{
+    height: auto;
+}
+
+.button.text:hover, .button.text :hover
 {
     font-size: var(--button-hover);
-}
-
-.button.height img:hover
-{
-    height: var(--button-hover);
-}
-
-.button.width img:hover
-{
-    width: var(--button-hover);
-}
-
-.button:not(.width):not(.height) img:hover
-{
-    height: var(--button-hover);
-    width: var(--button-hover);
 }
 
 pre
@@ -300,8 +309,6 @@ pre.subtitle
 .container
 {
     border: solid var(--line-thickness);
-    
-    text-align: center;
 }
 
 .container.default
@@ -347,12 +354,6 @@ pre.subtitle
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-img
-{
-    width: 25rem;
-    max-width: 70vw;
 }
 
 .gallery img
