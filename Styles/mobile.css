@@ -1,0 +1,14 @@
+html
+{
+    font-size: 4vw;
+}
+
+:root
+{
+    --header-height: 2.5rem;
+
+    --font-size-topbar: 1rem;
+    --font-size-normal: 0.9rem;
+    --font-size-subtitle: 1.2rem;
+    --font-size-title: 1.8rem;
+}
