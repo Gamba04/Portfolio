@@ -33,14 +33,20 @@
     transition: height var(--transition-delay), width var(--transition-delay), font-size var(--transition-delay);
 }
 
-body
+html
 {
-    background-color: var(--color-light);
     font-family: 'Bahnschrift';
     font-weight: 300;
 
     overflow: overlay;
     overflow-x: hidden;
+
+    scroll-behavior: smooth;
+}
+
+body
+{
+    background-color: var(--color-light);
 }
 
 /* header ------------------------------------------------------------------------------------------------------------------------------- */
@@ -51,7 +57,7 @@ header
 
     position: sticky;
     height: var(--header-height);
-    padding: 0 0.25rem;
+    padding: 0 0.25em;
 
     z-index: 2;
 }
@@ -91,7 +97,7 @@ header .content > ul li
 
     font-size: var(--font-size-topbar);
 
-    padding: 0 0.1rem;
+    padding: 0 0.1em;
 }
 
 header .media
@@ -106,7 +112,7 @@ header .media
 header .media .button
 {
     height: 80%;
-    width: 2rem;
+    width: 2em;
 }
 
 /* main ------------------------------------------------------------------------------------------------------------------------------- */
@@ -118,13 +124,18 @@ main
 
 main .content
 {
-    padding-bottom: 7rem;
+    padding-bottom: 7em;
+}
+
+#home
+{
+    scroll-margin-top: 2em;
 }
 
 #home .headline
 {
     position: absolute;
-    top: 10rem;
+    top: 10em;
     height: fit-content;
     
     user-select: none;
@@ -135,28 +146,33 @@ main .content
     background-image: linear-gradient(#ebe3dd, #11091d);
     
     position: static;
-    height: 50rem;
+    height: 50em;
 
     z-index: -1;
 }
 
 #home .content
 {
-    padding-top: 10rem;
+    padding-top: 10em;
+}
+
+.secondary
+{
+    scroll-margin-top: 3em;
 }
 
 .secondary .headline
 {
-    margin-top: 2rem;
-    margin-bottom: 5rem;
+    margin-top: 2em;
+    margin-bottom: 5em;
 }
 
 /* footer ------------------------------------------------------------------------------------------------------------------------------- */
 
 footer
 {
-    padding-top: 1.5rem;
-    padding-bottom: 1rem;
+    padding-top: 1.5em;
+    padding-bottom: 1em;
     
     z-index: 1;
 }
@@ -173,7 +189,7 @@ footer .headline
     width: fit-content;
 
     margin: 0 auto;
-    margin-bottom: 2rem;
+    margin-bottom: 2em;
 }
 
 footer .content
@@ -183,7 +199,7 @@ footer .content
 
     margin: 0 auto;
 
-    line-height: 1.5rem;
+    line-height: 1.5em;
 }
 
 /* other ------------------------------------------------------------------------------------------------------------------------------- */
@@ -208,7 +224,7 @@ footer .content
 
 ::-webkit-scrollbar-thumb
 {
-    background: #888;
+    background: rgba(136, 136, 136, 0.8);
     border-radius: 100vh;
 }
 
@@ -246,9 +262,9 @@ div, section
     justify-content: center;
     align-items: center;
 
-    height: 10rem;
+    height: 10em;
     max-height: 25vw;
-    width: 35rem;
+    width: 35em;
     max-width: 80vw;
 
     margin: 0 auto;
@@ -256,7 +272,12 @@ div, section
 
 .headline .container.default
 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5em;
+}
+
+.secondary .container.default
+{
+    font-size: var(--scaling-mini);
 }
 
 pre
@@ -283,17 +304,17 @@ pre.subtitle
     position: relative;
     
     height: fit-content;
-    width: 25rem;
+    width: 25em;
     max-width: 80vw;
     
-    margin: 4rem auto;
+    margin: 4em auto;
 }
 
 img
 {
     display: block;
 
-    width: 25rem;
+    width: 25em;
     max-width: 70vw;
     
     user-select: none;
@@ -328,7 +349,7 @@ a img
 
 .gallery img
 {
-    margin: 1rem 0;
+    margin: 1em 0;
 }
 
 /* interactions ------------------------------------------------------------------------------------------------------------------------------- */

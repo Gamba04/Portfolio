@@ -5,10 +5,12 @@ html
 
 :root
 {
-    --header-height: 1.5rem;
+    --header-height: 1.5em;
 
-    --font-size-topbar: 0.7rem;
-    --font-size-normal: 0.7rem;
-    --font-size-subtitle: 1.2rem;
-    --font-size-title: 3rem;
+    --font-size-topbar: 0.7em;
+    --font-size-normal: 0.7em;
+    --font-size-subtitle: 1.2em;
+    --font-size-title: 3em;
+
+    --scaling-mini: 0.7em;
 }
