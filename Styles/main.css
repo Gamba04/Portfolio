@@ -39,6 +39,7 @@ body
     font-family: 'Bahnschrift';
     font-weight: 300;
 
+    overflow: overlay;
     overflow-x: hidden;
 }
 
@@ -195,17 +196,20 @@ footer .content
 
 ::-webkit-scrollbar
 {
-    width: 15px;
+    width: 10px;
 }
   
 ::-webkit-scrollbar-track
 {
-    background: #00000000;
+    background: transparent;
+
+    margin-block: 0.25vh;
 }
 
 ::-webkit-scrollbar-thumb
 {
     background: #888;
+    border-radius: 100vh;
 }
 
 ::-webkit-scrollbar-thumb:hover
