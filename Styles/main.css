@@ -30,7 +30,7 @@
     
     text-align: center;
     
-    transition: height var(--transition-delay), width var(--transition-delay), font-size var(--transition-delay);
+    transition: height var(--transition-delay), width var(--transition-delay), font-size var(--transition-delay), color var(--transition-delay), background-color var(--transition-delay);
 }
 
 html
@@ -85,19 +85,33 @@ header .content > ul
 {
     display: flex;
 
+    height: 100%;
+
     justify-content: space-between;
     pointer-events: all;
 }
 
 header .content > ul li
 {
-    position: relative;
-    top: calc(var(--header-height) * 0.03);
     display: inline;
+
+    position: relative;
+    height: 100%;
 
     font-size: var(--font-size-topbar);
 
     padding: 0 0.1em;
+}
+
+header .content > ul li a
+{
+    height: 100%;
+    padding-inline: 0.5em;
+}
+
+header .content > ul li a:hover
+{
+    background-color: #ccc6c1
 }
 
 header .media
