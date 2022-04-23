@@ -14,7 +14,7 @@
     --button-hover: 120%;
     --button-press: 80%;
 
-    --transition-delay: 0.1s;
+    --transition-delay: 0.2s;
 
     --line-thickness: 0.11rem;
 }
@@ -30,7 +30,7 @@
     
     text-align: center;
     
-    transition: height var(--transition-delay), width var(--transition-delay), font-size var(--transition-delay), color var(--transition-delay), background-color var(--transition-delay);
+    transition: height var(--transition-delay), width var(--transition-delay), font-size var(--transition-delay), color var(--transition-delay), background-color var(--transition-delay), opacity var(--transition-delay);
 }
 
 html
@@ -99,14 +99,12 @@ header .content > ul li
     height: 100%;
 
     font-size: var(--font-size-topbar);
-
-    padding: 0 0.1em;
 }
 
 header .content > ul li a
 {
     height: 100%;
-    padding-inline: 0.5em;
+    padding-inline: var(--topbar-separation);
 }
 
 header .content > ul li a:hover
@@ -155,12 +153,41 @@ main .content
     user-select: none;
 }
 
+#home .advance
+{
+    position: absolute;
+    
+    top: min(30em, 90vh);
+    height: fit-content;
+
+    user-select: none;
+}
+
+#home .advance > div
+{
+    width: 2.5em;
+
+    margin-inline: auto;
+}
+
+#home .advance img
+{
+    width: 100%;
+
+    opacity: 50%;
+}
+
+#home .advance img:hover
+{
+    opacity: 100%;
+}
+
 #home .gradient
 {
-    background-image: linear-gradient(#ebe3dd, #11091d);
+    background-image: linear-gradient(var(--color-light), var(--color-dark));
     
     position: static;
-    height: 50em;
+    height: 55em;
 
     z-index: -1;
 }
@@ -168,6 +195,11 @@ main .content
 #home .content
 {
     padding-top: 10em;
+}
+
+#first-content
+{
+    scroll-margin-top: 3em;
 }
 
 .secondary
@@ -202,7 +234,7 @@ footer .headline
 {
     width: fit-content;
 
-    margin: 0 auto;
+    margin-inline: auto;
     margin-bottom: 2em;
 }
 
@@ -211,7 +243,7 @@ footer .content
     height: fit-content;
     width: fit-content;
 
-    margin: 0 auto;
+    margin-inline: auto;
 
     line-height: 1.5em;
 }
@@ -226,7 +258,7 @@ footer .content
 
 ::-webkit-scrollbar
 {
-    width: 10px;
+    width: 15px;
 }
   
 ::-webkit-scrollbar-track
@@ -240,11 +272,15 @@ footer .content
 {
     background: rgba(136, 136, 136, 0.8);
     border-radius: 100vh;
+
+    border: solid transparent 3px;
+    background-clip: padding-box;
 }
 
 ::-webkit-scrollbar-thumb:hover
 {
-    background: #555; 
+    background: #555;
+    background-clip: padding-box;
 }
 
 .dark
@@ -281,7 +317,7 @@ div, section
     width: 35em;
     max-width: 80vw;
 
-    margin: 0 auto;
+    margin-inline: auto;
 }
 
 .headline .container.default

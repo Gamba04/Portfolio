@@ -6,6 +6,8 @@ html
 :root
 {
     --header-height: 2.2em;
+    
+    --topbar-separation: 0.5em;
 
     --font-size-topbar: 1em;
     --font-size-normal: 0.9em;
