@@ -2,30 +2,15 @@ window.onload = Load;
 
 async function Load()
 {
-    let page = document.getElementById("page");
-    let body = document.getElementsByTagName("body")[0];
-
-    let index = await GetIndex();
-    let indexBody = index.getElementsByTagName("body")[0];
-    body.innerHTML = indexBody.innerHTML;
-
-    let newPage = document.getElementById("page");
-    newPage.innerHTML = page.innerHTML;
+    await LoadElement("itch-io");
+    await LoadElement("contact");
 }
 
-async function GetIndex()
+async function LoadElement(id)
 {
-    let response = await fetch("index.html");
-    let html = await response.text();
+    let element = document.getElementById(id);
+    let path = `../templates/${id}.html`;
 
-    let index = ParseHTML(html);
-
-    return index;
-}
-
-function ParseHTML(html)
-{
-    let parser = new DOMParser();
-
-    return parser.parseFromString(html, "text/html");
+    let template = await fetch(path);
+    element.innerHTML = await template.text();
 }
