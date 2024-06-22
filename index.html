@@ -9,11 +9,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" href="./Resources/Images/Other/icon.png">
+    <link rel="icon" href="./resources/images/other/icon.png">
 
-    <link rel="stylesheet" href="./Styles/main.css">
-    <link rel="stylesheet" href="./Styles/portrait.css" media="(max-aspect-ratio: 1/1)">
-    <link rel="stylesheet" href="./Styles/landscape.css" media="(min-aspect-ratio: 1/1)">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/portrait.css" media="(max-aspect-ratio: 1/1)">
+    <link rel="stylesheet" href="./css/landscape.css" media="(min-aspect-ratio: 1/1)">
+    
+    <script src="./js/oldRouter.js"></script>
 </head>
 
 <body>
@@ -24,9 +26,9 @@
 
         <div class="content">
             <ul>
-                <li><a class="button text" href="#home">HOME</a></li>
-                <li><a class="button text" href="#music&Art">MUSIC & ART</a></li>
-                <li><a class="button text" href="#about">ABOUT</a></li>
+                <li><a class="button text" href="/" onclick="route()">HOME</a></li>
+                <li><a class="button text" href="/music&art" onclick="route()">MUSIC & ART</a></li>
+                <li><a class="button text" href="/about" onclick="route()">ABOUT</a></li>
                 <li><a class="button text" href="#contact">CONTACT</a></li>
             </ul>
         </div>
@@ -35,7 +37,7 @@
             <div class="button img height">
                 <div class="root">
                     <a href="https://gamba04.itch.io/">
-                        <img src="./Resources/Images/Other/itch-io.png" alt="itch.io">
+                        <img src="./resources/images/other/itch-io.png" alt="itch.io">
                     </a>
                 </div>
             </div>
@@ -46,92 +48,7 @@
 <!-- main ----------------------------------------------------->
 
     <main>
-
-        <section id="home">
-            
-            <div class="headline">
-
-                <div class="default container">
-                    <pre class="title">G A M B A  0 4</pre>
-                </div>
-
-                <pre class="subtitle">GAME DEV • ARTIST • MUSIC PRODUCER</pre>
-
-            </div>
-            
-            <div class="advance">
-                <div>
-                    <a href="#first-content">
-                        <img src="./Resources/Images/Other/Arrow_down.png" alt="Arrow down">
-                    </a>
-                </div>
-            </div>
-
-            <div class="gradient"></div>
-
-            <section class="dark content">
-
-                <div class="default container">
-                    <pre class="title" id="first-content">CHROMAN</pre>
-                </div>
-
-                <div class="textBlock">
-                    <pre>Chroman is a top-down game with a gameplay centered in action and puzzle solving, swap between colors to change your attacks and traversal options, explore by solving puzzles and fighting enemies and bosses to find different colors and collectibles.</pre>
-                </div>
-
-                <section class="gallery">
-                    <img class="container" src="./Resources/Images/Chroman/Chroman_1.png" alt="Chroman screenshot 1">
-                    <img class="container" src="./Resources/Images/Chroman/Chroman_2.png" alt="Chroman screenshot 2">
-                </section>
-
-            </section>
-
-        </section>
-
-        <section id="music&Art" class="secondary">
-            
-            <div class="headline">
-
-                <div class="default container">
-                    <pre class="title">MUSIC & ART</pre>
-                </div>
-
-                <pre class="subtitle"><a href="https://soundcloud.com/code_dreamer">CODE DREAMER</a> • <a href="https://www.instagram.com/art.jcquintero/">@ART.JCQUINTERO</a></pre>
-
-            </div>
-
-            <section class="content">
-                <section class="gallery">
-                    <img class="container" src="./Resources/Images/Art/luna.jpg" alt="Drawing of Luna">
-                    <img class="container" src="./Resources/Images/Art/bastian.jpg" alt="Drawing of Bastian">
-                    <img class="container" src="./Resources/Images/Art/abuela.jpg" alt="Drawing of Grandmother">
-                    <img class="container" src="./Resources/Images/Art/caballo1.jpg" alt="Drawing of Horse 1">
-                    <img class="container" src="./Resources/Images/Art/caballo2.jpg" alt="Drawing of Horse 2">
-                </section>
-            </section>
-
-        </section>
-
-        <section id="about" class="secondary">
-            
-            <div class="headline">
-
-                <div class="default container">
-                    <pre class="title">ABOUT</pre>
-                </div>
-
-                <pre class="subtitle">JUAN CAMILO QUINTERO</pre>
-
-            </div>
-
-            <section class="content">
-                <div class="gallery">
-                    <img class="container" src="./Resources/Images/Other/yo.JPG" alt="Picture of me">
-                </div>
-            </section>
-            
-        </section>
-
+        <section id="page-container"></section>
     </main>
 
 <!-- footer --------------------------------------------------->

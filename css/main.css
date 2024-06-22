@@ -1,9 +1,7 @@
 @font-face
 {
-    font-family: "Bahnschrift";
-    src: url("./Resources/Fonts/Bahnschrift.woff") format("woff");
-    
-    font-style: normal;
+    font-family: "Backup";
+    src: url("../resources/fonts/other/praktika.woff") format("woff");
 }
 
 :root
@@ -35,8 +33,9 @@
 
 html
 {
-    font-family: 'Bahnschrift';
-    font-weight: 300;
+    font-family: "Backup";
+    font-family: "Bahnschrift";
+    font-weight: lighter;
 
     overflow: overlay;
     overflow-x: hidden;
