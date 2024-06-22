@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         
@@ -10,31 +10,63 @@
         <link rel="stylesheet" href="./styles/main.css">
         <link rel="stylesheet" href="./styles/portrait.css" media="(max-aspect-ratio: 1/1)">
         <link rel="stylesheet" href="./styles/landscape.css" media="(min-aspect-ratio: 1/1)">
-
-        <script src="./scripts/loader.js"></script>
     </head>
 
     <body>
-        <section id="page">
-            <section class="secondary">
-                <div class="headline">
-                    <div class="default container">
-                        <pre class="title">MUSIC & ART</pre>
+        <header class="container">
+            <div class="content">
+                <ul>
+                    <li><a class="button text" href="./">HOME</a></li>
+                    <li><a class="button text" href="#music&art">MUSIC & ART</a></li>
+                    <li><a class="button text" href="./about.html">ABOUT</a></li>
+                    <li><a class="button text" href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+            
+            <div class="media">
+                <div class="button img height">
+                    <div class="root">
+                        <a href="https://gamba04.itch.io/">
+                            <img src="./resources/images/other/itch-io.png" alt="itch.io">
+                        </a>
                     </div>
-            
-                    <pre class="subtitle"><a href="https://soundcloud.com/code_dreamer">CODE DREAMER</a> • <a href="https://www.instagram.com/art.jcquintero/">@ART.JCQUINTERO</a></pre>
                 </div>
-            
-                <section class="content">
-                    <section class="gallery">
-                        <img class="container" src="./resources/images/music&art/luna.jpg" alt="Drawing of Luna">
-                        <img class="container" src="./resources/images/music&art/bastian.jpg" alt="Drawing of Bastian">
-                        <img class="container" src="./resources/images/music&art/abuela.jpg" alt="Drawing of Grandmother">
-                        <img class="container" src="./resources/images/music&art/caballo1.jpg" alt="Drawing of Horse 1">
-                        <img class="container" src="./resources/images/music&art/caballo2.jpg" alt="Drawing of Horse 2">
+            </div>
+        </header>
+
+        <main>
+            <section id="page">
+                <section id="music&art" class="secondary">
+                    <div class="headline">
+                        <div class="default container">
+                            <pre class="title">MUSIC & ART</pre>
+                        </div>
+                
+                        <pre class="subtitle"><a href="https://soundcloud.com/code_dreamer">CODE DREAMER</a> • <a href="https://www.instagram.com/art.jcquintero/">@ART.JCQUINTERO</a></pre>
+                    </div>
+                
+                    <section class="content">
+                        <section class="gallery">
+                            <img class="container" src="./resources/images/music&art/luna.jpg" alt="Drawing of Luna">
+                            <img class="container" src="./resources/images/music&art/bastian.jpg" alt="Drawing of Bastian">
+                            <img class="container" src="./resources/images/music&art/abuela.jpg" alt="Drawing of Grandmother">
+                            <img class="container" src="./resources/images/music&art/caballo1.jpg" alt="Drawing of Horse 1">
+                            <img class="container" src="./resources/images/music&art/caballo2.jpg" alt="Drawing of Horse 2">
+                        </section>
                     </section>
                 </section>
             </section>
-        </section>
+        </main>
+
+        <footer id="contact" class="dark container">
+                <div class="headline">
+                    <pre class="subtitle">CONTACT</pre>
+                </div>
+
+                <section class="content">
+                    <pre><a href="https://wa.me/573002772091">cel: +57 300 277 2091</a></pre>
+                    <pre><a href="mailto: juanca.quinterom@gmail.com">email: juanca.quinterom@gmail.com</a></pre>
+                </section>
+        </footer>
     </body>
 </html>
