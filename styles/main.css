@@ -15,12 +15,17 @@
     --transition-delay: 0.2s;
 
     --line-thickness: 0.11rem;
+
+    font-family: "Backup";
+    font-family: "Bahnschrift";
+    font-weight: lighter;
+
+    scroll-behavior: smooth;
 }
 
 *
 {
-    top: 0;
-    left: 0;
+    inset: 0;
     margin: 0;
     padding: 0;
 
@@ -33,14 +38,7 @@
 
 html
 {
-    font-family: "Backup";
-    font-family: "Bahnschrift";
-    font-weight: lighter;
-
-    overflow: overlay;
     overflow-x: hidden;
-
-    scroll-behavior: smooth;
 }
 
 body
@@ -336,6 +334,8 @@ pre
     font-size: var(--font-size-normal);
     
     white-space: pre-wrap;
+
+    cursor: default;
 }
 
 pre.title
